@@ -97,25 +97,8 @@ body {
   text-decoration-color: var(--color-black);
 }
 
-.service-title {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--color-black);
-}
-@media only screen and (min-width: 37.5em) {
-  .service-title {
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-width: 56.25em) {
-  .service-title {
-    font-size: 2.2rem;
-  }
-}
-
 .heading--3 {
   font-size: 1.8rem;
-  font-weight: 500;
   font-family: var(--ff-roboto);
   color: var(--color-black);
 }
@@ -128,6 +111,14 @@ body {
   .heading--3 {
     font-size: 2.2rem;
   }
+}
+
+.service-title {
+  font-weight: 500;
+}
+
+.step-title {
+  font-weight: 400;
 }
 
 .service-summary {
@@ -176,6 +167,7 @@ body {
 @media only screen and (min-width: 37.5em) {
   .big-label__text {
     font-size: 4.4rem;
+    text-align: left;
   }
 }
 @media only screen and (min-width: 56.25em) {
@@ -196,6 +188,10 @@ body {
 
 .mb-3 {
   margin-bottom: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: clamp(3rem, 4vw, 6rem);
 }
 
 .mt-2 {
@@ -244,10 +240,20 @@ body {
 }
 
 .btn--large {
-  font-size: 3rem;
+  font-size: 2.6rem;
   padding: 1rem 2rem;
   color: var(--color-white);
   background-color: var(--color-primary);
+}
+@media only screen and (min-width: 37.5em) {
+  .btn--large {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .btn--large {
+    font-size: 3rem;
+  }
 }
 
 .header {
@@ -359,6 +365,7 @@ body {
 .col-3-grid {
   display: grid;
   justify-items: center;
+  align-items: center;
   grid-gap: 4rem;
   grid-template-columns: 1fr;
 }
@@ -440,11 +447,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 2.5rem;
 }
 @media only screen and (min-width: 37.5em) {
   .big-label__wrapper {
     flex-direction: row;
+    gap: 5rem;
   }
 }
 
@@ -456,6 +464,9 @@ body {
   flex-basis: 50%;
 }
 
+.three-steps {
+  padding: 5rem 2.5rem;
+}
 .three-steps__wrapper {
   max-width: 99rem;
   margin: 0 auto;
@@ -467,6 +478,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   display: flex;
+  border: 1px solid #707070;
 }
 .three-steps__img img {
   width: 100%;

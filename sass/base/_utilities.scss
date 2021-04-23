@@ -12,6 +12,10 @@
     margin-bottom: 3rem;
 }
 
+.mb-6{
+    margin-bottom: clamp(3rem, 4vw, 6rem);
+}
+
 .mt-2{
     margin-top: 2rem;
 }

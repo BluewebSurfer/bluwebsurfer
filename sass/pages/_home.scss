@@ -100,10 +100,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 5rem;
+        gap: 2.5rem;
     
         @include respond(phone){
             flex-direction: row;
+            gap: 5rem;
         }
     }
 }
@@ -118,6 +119,7 @@
 
 
 .three-steps{
+    padding: 5rem 2.5rem;
     &__wrapper{
         max-width: 99rem;
         margin: 0 auto;
@@ -130,8 +132,9 @@
     border-radius: 50%;
     overflow: hidden;
     display: flex;
+    border: 1px solid #707070;
+
     img{
         width: 100%;
-
     }
 }
