@@ -138,3 +138,18 @@
         width: 100%;
     }
 }
+
+.whychooseus{
+    padding: 5rem 2.5rem;
+    background-color: #4BB0C2;
+
+    &__icon{
+        i{
+            font-size: 5rem;
+            color: var(--color-white);
+            @include respond(phone){
+             font-size: 7rem;
+            }
+        }
+    }
+}

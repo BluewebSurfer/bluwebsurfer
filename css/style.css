@@ -58,6 +58,13 @@ body {
   margin: 0 auto;
 }
 
+.whychooseus__desc {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
 .hero__title {
   font-size: 2.8rem;
   font-weight: 700;
@@ -84,7 +91,7 @@ body {
   }
 }
 
-.common-section-title {
+.cs-title {
   display: inline-block;
   font-size: clamp(2.4rem, 2.5vw, 3.6rem);
   font-family: var(--ff-primary);
@@ -92,25 +99,33 @@ body {
   color: var(--color-black);
 }
 
+.cs-title--white {
+  color: var(--color-white);
+}
+
 .services__title {
   text-decoration: underline;
   text-decoration-color: var(--color-black);
 }
 
-.heading--3 {
+.heading-3 {
   font-size: 1.8rem;
   font-family: var(--ff-roboto);
   color: var(--color-black);
 }
 @media only screen and (min-width: 37.5em) {
-  .heading--3 {
+  .heading-3 {
     font-size: 2rem;
   }
 }
 @media only screen and (min-width: 56.25em) {
-  .heading--3 {
+  .heading-3 {
     font-size: 2.2rem;
   }
+}
+
+.heading-3--white {
+  color: var(--color-white);
 }
 
 .service-title {
@@ -375,6 +390,42 @@ body {
   }
 }
 
+.whychooseus__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: start;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 3rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .whychooseus__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .whychooseus__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.whychooseus__grid-item {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "icon title" "icon desc";
+  align-items: start;
+  justify-content: start;
+}
+
+.whychooseus__icon {
+  grid-area: icon;
+  justify-self: center;
+}
+
+.whychooseus__desc {
+  grid-area: desc;
+}
+
 .services {
   padding: 4rem 2.5rem;
 }
@@ -482,4 +533,18 @@ body {
 }
 .three-steps__img img {
   width: 100%;
+}
+
+.whychooseus {
+  padding: 5rem 2.5rem;
+  background-color: #4BB0C2;
+}
+.whychooseus__icon i {
+  font-size: 5rem;
+  color: var(--color-white);
+}
+@media only screen and (min-width: 37.5em) {
+  .whychooseus__icon i {
+    font-size: 7rem;
+  }
 }

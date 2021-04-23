@@ -52,3 +52,44 @@
         grid-template-columns: repeat(3,1fr);
     }
 }
+
+
+
+
+.whychooseus__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 3rem;
+
+
+    @include respond(phone){
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include respond(tab-port){
+        grid-template-columns: repeat(3,1fr);
+    }
+
+
+    &-item{
+        display: grid;
+        grid-template-columns: 1fr 2.2fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "icon title" "icon desc";
+        align-items: start;
+        justify-content: start;
+    }
+}
+
+
+.whychooseus__icon{
+    grid-area: icon;
+    justify-self: center;
+}
+
+.whychooseus__desc{
+    grid-area: desc;
+}
