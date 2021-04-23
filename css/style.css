@@ -23,10 +23,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 :root {
   --color-primary: rgb(0, 194, 255);
+  --color-blue: rgb(0, 194, 255);
   --color-black: #333333;
   --color-white: rgb(255, 255, 255);
   --color-dark-grey: rgba(0, 0, 0, 0.6);
   --color-light-grey: rgba(196, 196, 196, 0.28);
+  --color-light-grey-2: rgb(108, 117, 125);
   --color-light-cyan: rgba(103,204,218,.66);
   --ff-primary: "Raleway", sans-serif;
   --ff-secondary: "Montserrat", sans-serif;
@@ -94,7 +96,7 @@ body {
 .cs-title {
   display: inline-block;
   font-size: clamp(2.4rem, 2.5vw, 3.6rem);
-  font-family: var(--ff-primary);
+  font-family: var(--ff-roboto);
   font-weight: 700;
   color: var(--color-black);
 }
@@ -189,6 +191,34 @@ body {
   .big-label__text {
     font-size: 4.8rem;
   }
+}
+
+.plans__item-title {
+  font-size: 1.6rem;
+  font-family: var(--ff-roboto);
+  color: var(--color-white);
+  display: inline-block;
+  background-color: var(--color-blue);
+  border-end-start-radius: 4px;
+  border-end-end-radius: 4px;
+  padding: 0.5rem 3rem;
+}
+.plans__item-price {
+  font-size: 3.5rem;
+  font-family: var(--ff-roboto);
+  color: var(--color-blue);
+  display: inline-block;
+}
+@media only screen and (min-width: 37.5em) {
+  .plans__item-price {
+    font-size: 4rem;
+  }
+}
+.plans__item-desc {
+  font-size: 1.6rem;
+  color: var(--color-light-grey-2);
+  font-family: var(--ff-roboto);
+  font-weight: 400;
 }
 
 .vertical-center {
@@ -426,6 +456,22 @@ body {
   grid-area: desc;
 }
 
+.plans__cards {
+  display: grid;
+  grid-gap: 3.3rem;
+  grid-template-columns: 1fr;
+}
+@media only screen and (min-width: 37.5em) {
+  .plans__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .plans__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .services {
   padding: 4rem 2.5rem;
 }
@@ -547,4 +593,25 @@ body {
   .whychooseus__icon i {
     font-size: 7rem;
   }
+}
+
+.plans {
+  padding: 5rem 2.5rem;
+}
+.plans__item {
+  border: 2px solid var(--color-blue);
+  padding: 0 1rem 1rem 1rem;
+  display: grid;
+  justify-items: center;
+  grid-gap: 2rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .plans__item {
+    grid-gap: 4rem;
+  }
+}
+.plans__item-features {
+  display: grid;
+  grid-gap: 1.1rem;
+  justify-items: center;
 }

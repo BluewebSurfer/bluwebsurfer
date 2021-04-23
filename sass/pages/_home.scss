@@ -139,6 +139,9 @@
     }
 }
 
+///////////////////////////////////
+// WHY CHOOSE US SECTION
+
 .whychooseus{
     padding: 5rem 2.5rem;
     background-color: #4BB0C2;
@@ -150,6 +153,35 @@
             @include respond(phone){
              font-size: 7rem;
             }
+        }
+    }
+}
+
+
+///////////////////////////////////
+// OUR PLANS SECTION
+.plans{
+    padding: 5rem 2.5rem;
+
+    &__item{
+        border: 2px solid var(--color-blue);
+        padding: 0 1rem 1rem 1rem;
+
+        display: grid;
+        justify-items: center;
+        grid-gap: 2rem;
+
+        @include respond(phone){
+            grid-gap: 4rem;
+        }
+
+
+
+        &-features{
+            display: grid;
+            grid-gap: 1.1rem;
+            justify-items: center;
+
         }
     }
 }
