@@ -1,0 +1,47 @@
+:root{
+    // COLORS
+    --color-primary: rgb(0, 194, 255);
+    --color-black: #333333;
+    --color-white: rgb(255, 255, 255);
+    --color-dark-grey: rgba(0, 0, 0, 0.6);
+    --color-light-grey: rgba(196, 196, 196, 0.28);
+    --color-light-cyan: rgba(103,204,218,.66);
+
+
+    // FONT FAMILY
+    --ff-primary: 'Raleway', sans-serif;
+    --ff-secondary: 'Montserrat', sans-serif;
+    --ff-tertiary: 'Poppins', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    
+}
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 300;
+    color: var(--color-black);
+}
+
+
+.container{
+    max-width: 110rem;
+    margin: 0 auto;
+}

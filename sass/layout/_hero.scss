@@ -1,0 +1,14 @@
+.hero{
+    padding: 0 2.5rem;
+    background-color: #595959;
+    height: calc(100vh - 10rem);
+
+    &__content{
+        max-width: 50rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        justify-content: start;
+    }
+
+}

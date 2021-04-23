@@ -1,0 +1,137 @@
+////////////////////////
+// SERVICES SECTION
+
+.services{
+    padding: 4rem 2.5rem;
+}
+
+
+.services__wrapper{
+    max-width: 92rem;
+    margin: 0 auto;
+}
+
+
+.service-img{
+    width: 100%;
+}
+
+//////////////////////////////
+// SERVICE DETAILS SECTION
+
+.service-details{
+
+    &__wrapper{
+        max-width: 92.5rem;
+        margin: 0 auto;
+    }
+
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: clamp(3rem, 3.5vw, 4rem);
+
+        &:not(:first-child){
+            margin-top: 3rem;
+        }
+
+        @include respond(phone){
+            &:nth-child(odd){
+                grid-template-columns: 1fr 2.06fr;
+
+                .service-details__img{
+                    order: 1;
+                }
+                .service-details__text{
+                    order: 2;
+                }
+            }
+    
+            &:nth-child(even){
+                grid-template-columns: 2.06fr 1fr;
+                
+                .service-details__img{
+                    order: 2;
+                }
+                .service-details__text{
+                    order: 1;
+                }
+            }
+        }
+
+    
+    }
+
+    &__img{
+        display: flex;
+        border: 1px solid #707070;
+        border-radius: 50%;
+        overflow: hidden;
+
+        width: 28rem;
+        height: 28rem;
+
+        @include respond(phone){
+
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__text{
+        padding: 3.5rem 2rem;
+        background-color: var(--color-light-grey);
+    }
+}
+
+
+.big-label{
+    background-color: var(--color-light-cyan);
+    padding: 3rem 2.5rem;
+
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+    
+        @include respond(phone){
+            flex-direction: row;
+        }
+    }
+}
+
+.big-label__text{
+    flex-basis: 50%;
+}
+
+.btn--large{
+    flex-basis: 50%;
+}
+
+
+.three-steps{
+    &__wrapper{
+        max-width: 99rem;
+        margin: 0 auto;
+    }
+}
+
+.three-steps__img{
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    img{
+        width: 100%;
+
+    }
+}
