@@ -112,3 +112,73 @@
     }
     
 }
+
+
+///////////////////////////////////
+// WHAT WE DO SECTION
+
+.whatwedo{
+
+    &__grid{
+        display: grid;
+        align-items: center;
+        justify-content: start;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    
+    
+        @include respond(phone){
+            grid-template-columns: 5.5fr 5fr;
+        }
+    }
+
+
+    &__desc{
+        order: 2;
+    }
+
+    &__img{
+        order: 1;
+    }
+
+    @include respond(phone){
+        &__desc{
+            order: 1;
+        }
+    
+        &__img{
+            order: 2;
+        }
+    }
+
+}
+
+.contactus-grid{
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+
+    @include respond(tab-port){
+        grid-template-columns: 5fr 5.5fr;
+    }
+}
+
+
+///////////////////////////////////
+// FOOTER
+
+.footer__grid{
+    display: grid;
+    justify-items: space-between;
+    align-items: start;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr;
+
+
+    @include respond(phone){
+        grid-template-columns: repeat(3,1fr);
+
+    }
+}
