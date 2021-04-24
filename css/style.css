@@ -399,6 +399,11 @@ body {
   padding: 0 2.5rem;
 }
 
+.logo img {
+  width: 15rem;
+  height: 10rem;
+}
+
 /* NAVIGATION */
 .nav {
   display: flex;
