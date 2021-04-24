@@ -266,14 +266,8 @@
 // FOOTER
 
 .footer{
-    padding: 2rem 2.5rem;
+    padding: 5rem 2.5rem;
     background-color: var(--color-black);
-
-
-
-    @include respond(tab-port){
-        padding: 5rem 2.5rem;
-    }
 }
 
 @include respond(phone){
