@@ -1,7 +1,18 @@
 .hero{
     padding: 0 2.5rem;
-    background-color: #595959;
+    // background-color: #595959;
+    background: url("../images/programmer.svg"),url("../images/bg.png");
+    background-position: top center,left center;
+    background-repeat: no-repeat;
+    background-size: 80%, cover;
     height: calc(100vh - 10rem);
+
+
+    @include respond(phone){
+        background-position: right center,left center;
+        background-size: 50%, 100%;
+
+    }
 
     &__content{
         max-width: 50rem;
