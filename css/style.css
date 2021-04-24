@@ -104,11 +104,6 @@ body {
   color: var(--color-white);
 }
 
-.services__title {
-  text-decoration: underline;
-  text-decoration-color: var(--color-black);
-}
-
 .heading-3 {
   font-size: 1.8rem;
   font-family: var(--ff-roboto);
@@ -753,6 +748,7 @@ body {
 .plans__item {
   border: 2px solid var(--color-blue);
   padding: 0 1rem 1rem 1rem;
+  border-radius: 4px;
   display: grid;
   justify-items: center;
   grid-gap: 2rem;
