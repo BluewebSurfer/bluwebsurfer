@@ -4,8 +4,13 @@
 
 .logo{
     img{
-        width: 15rem;
-        height: 10rem;
+        width: 12rem;
+        height: 8rem;
+
+        @include respond(phone){
+            width: 15rem;
+            height: 10rem;
+        }
     }
 }
   

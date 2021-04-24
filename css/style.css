@@ -261,7 +261,7 @@ body {
 .vertical-center {
   position: relative;
   top: 50%;
-  transform: translateY(-30%);
+  transform: translateY(-33%);
 }
 @media only screen and (min-width: 37.5em) {
   .vertical-center {
@@ -400,8 +400,14 @@ body {
 }
 
 .logo img {
-  width: 15rem;
-  height: 10rem;
+  width: 12rem;
+  height: 8rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .logo img {
+    width: 15rem;
+    height: 10rem;
+  }
 }
 
 /* NAVIGATION */
@@ -475,8 +481,13 @@ body {
   max-width: 50rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 1rem;
   justify-content: start;
+}
+@media only screen and (min-width: 37.5em) {
+  .hero__content {
+    grid-gap: 3rem;
+  }
 }
 
 .services__grid {
