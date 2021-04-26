@@ -295,6 +295,7 @@ body {
   display: inline-block;
   line-height: 1;
   font-weight: 400;
+  border-radius: 0.5rem;
 }
 
 .hero__cta {
@@ -349,6 +350,7 @@ body {
   padding: 1rem 2.5rem;
   background-color: var(--color-primary);
   color: var(--color-white);
+  border-radius: 0.5rem;
 }
 
 .form__input {
