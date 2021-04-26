@@ -17,7 +17,7 @@
     <header class="header">
       <nav class="nav container">
         <a href="http://bluewebsurfer.com/" class="logo"><img src="images/logo.png" alt="Bluewebsurfer logo"></a>
-        <ul class="nav__links">
+        <ul class="nav__links collapse">
           <li class="nav__item">
             <a class="nav__link" href="#">Home</a>
           </li>
@@ -43,11 +43,15 @@
             <a class="nav__link" href="#">Contact Us</a>
           </li>
         </ul>
-        <a class="btn btn--primary btn--show-modal hide-tab-port" href="#"
-          >Register</a
-        >
+        <a class="btn btn--primary hide-tab-port" href="#">Register</a>
+        <div class="nav-mobile">
+          <div id="nav-toggle">
+            <span></span>
+          </div>
+        </div>
       </nav>
     </header>
+
     <section class="hero">
       <div class="container vertical-center">
         <div class="hero__content">
@@ -580,5 +584,6 @@
       </div>
     </footer>
     
+    <script src="js/script.js"></script>
   </body>
 </html>

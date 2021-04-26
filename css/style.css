@@ -395,10 +395,6 @@ body {
   transform: translateY(-4rem);
 }
 
-.header {
-  padding: 0 2.5rem;
-}
-
 .logo img {
   width: 12rem;
   height: 8rem;
@@ -412,12 +408,21 @@ body {
 
 /* NAVIGATION */
 .nav {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  height: 9rem;
+  align-items: flex-start;
   width: 100%;
   z-index: 100;
+  padding: 0 2rem;
+}
+@media only screen and (min-width: 56.25em) {
+  .nav {
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 /* nav and stickly class at the same time */
@@ -426,24 +431,33 @@ body {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.nav__logo {
-  height: 4.5rem;
-  transition: all 0.3s;
-}
-
 .nav__links {
-  display: none;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   list-style: none;
+  transition: height 300ms ease;
 }
 @media only screen and (min-width: 56.25em) {
   .nav__links {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
-.nav__item {
-  margin-left: 4rem;
+.nav__links.collapsing {
+  height: 0;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav__links.collapse {
+    display: none;
+  }
+}
+
+.nav__links.open {
+  display: flex;
 }
 
 .nav__link:link,
@@ -455,12 +469,67 @@ body {
   text-decoration: none;
   display: block;
   transition: all 0.3s;
+  padding: 1.5rem 0;
+}
+@media only screen and (min-width: 56.25em) {
+  .nav__link:link,
+.nav__link:visited {
+    padding: 1.5rem 2.5rem;
+  }
 }
 
 .nav__link svg {
   height: 1rem;
   width: 1rem;
   fill: var(--color-dark-grey);
+}
+
+.nav-mobile {
+  position: absolute;
+  display: inline-block;
+  top: 3rem;
+  right: 2rem;
+}
+@media only screen and (min-width: 56.25em) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
+#nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 30px;
+  background: var(--color-black);
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 
 .hero {
@@ -474,7 +543,7 @@ body {
 @media only screen and (min-width: 37.5em) {
   .hero {
     background-position: right center, left center;
-    background-size: 50%, 100%;
+    background-size: 50%, cover;
   }
 }
 .hero__content {

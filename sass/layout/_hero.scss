@@ -10,7 +10,7 @@
 
     @include respond(phone){
         background-position: right center,left center;
-        background-size: 50%, 100%;
+        background-size: 50%, cover;
     }
 
     &__content{
