@@ -1,10 +1,12 @@
 const navToggle = document.getElementById("nav-toggle");
 const navList = document.querySelector(".nav__links");
+const btnRegister = document.querySelector('.btn--register');
 
 navToggle.addEventListener('click',function(e){
     if(!navList.classList.contains('collapsing')){
         if(!navToggle.classList.contains('active')){
             navList.style.display = 'flex';
+            btnRegister.style.display = 'inline-block';
 
             let navListHeight = navList.clientHeight;
             console.log(navListHeight);
@@ -22,6 +24,8 @@ navToggle.addEventListener('click',function(e){
             }, 300);
         }else{
             navList.classList = 'nav__links collapsing';
+            btnRegister.style.display = 'none';
+
 
             setTimeout(() => {
                 navList.style.height = '0px';

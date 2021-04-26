@@ -9,7 +9,7 @@
 
   width: 100%;
   z-index: 100;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 
   @include respond(tab-port){
     padding: 0;
@@ -27,7 +27,6 @@
 
 
 .nav__links {
-  // display: none;
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
@@ -48,7 +47,8 @@
 	overflow: hidden;
 }
 
-.nav__links.collapse {
+.nav__links.collapse, 
+.btn.collapse {
   @media only screen and (max-width:900px){
     display: none;
   }
@@ -57,6 +57,8 @@
 .nav__links.open {
   display: flex;
 }
+
+
 
 .nav__link:link,
 .nav__link:visited {
