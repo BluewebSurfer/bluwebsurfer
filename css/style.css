@@ -79,6 +79,21 @@ body {
   }
 }
 
+.common-hero-heading {
+  color: var(--color-white);
+  font-size: 4rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .common-hero-heading {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .common-hero-heading {
+    font-size: 5rem;
+  }
+}
+
 .hero__description {
   font-size: 1.8rem;
   font-weight: 400;
@@ -258,6 +273,15 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.about-h-desc {
+  font-size: 2rem;
+  color: var(--color-black);
+  text-align: center;
+  line-height: 1.6;
+  font-family: var(--ff-roboto);
+  font-weight: 400;
+}
+
 .vertical-center {
   position: relative;
   top: 50%;
@@ -287,6 +311,10 @@ body {
 
 .mt-2 {
   margin-top: 2rem;
+}
+
+.c-section-p {
+  padding: 5rem 2.5rem;
 }
 
 .btn:link,
@@ -968,4 +996,15 @@ body {
     flex-direction: row;
     margin-top: 0;
   }
+}
+
+.common-hero {
+  height: 80vh;
+  background-image: url("../images/about.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }

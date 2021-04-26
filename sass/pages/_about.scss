@@ -1,0 +1,14 @@
+.common-hero{
+    height: 80vh;
+
+    background-image: url("../images/about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}

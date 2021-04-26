@@ -19,6 +19,21 @@
     }
 }
 
+.common-hero-heading{
+    color: var(--color-white);
+    font-size: 4rem;
+
+
+    @include respond(phone){
+        font-size: 4.5rem;
+
+    }
+    @include respond(tab-port){
+        font-size: 5rem;
+
+    }
+}
+
 .hero__description{
     font-size: 1.8rem;
     font-weight: 400;
@@ -30,6 +45,8 @@
         font-size: 2.1rem;
     }
 }
+
+
 
 
 .cs-title{
@@ -213,5 +230,17 @@
     font-weight: 200;
     font-family: var(--ff-roboto);
     color: rgba(255, 255, 255, .7);
+}
+
+
+///////////////////////////////
+// ABOUT US PAGE
+.about-h-desc{
+    font-size: 2rem;
+    color: var(--color-black);
+    text-align: center;
+    line-height: 1.6;
+    font-family: var(--ff-roboto);
+    font-weight: 400;
 }
 
