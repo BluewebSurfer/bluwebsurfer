@@ -1133,3 +1133,7 @@ body {
 .gmap_iframe {
   height: 80vh;
 }
+
+.registration {
+  border-top: 1px solid #eee;
+}
