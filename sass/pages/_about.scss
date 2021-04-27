@@ -1,14 +1,71 @@
 .common-hero{
     height: 80vh;
 
-    background-image: url("../images/about.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-
-
     display: grid;
     align-content: center;
     justify-content: center;
+}
+
+.about-hero{
+    background-image: url("../images/about.jpg");
+}
+
+
+.about-content{
+    display: grid;
+    gap: 3rem;
+    margin-top: 5rem;
+    align-items: center;
+    grid-template-columns: 1fr;
+
+    @include respond(phone){
+
+        &:nth-child(even){
+            grid-template-columns: 5.3fr 5.5fr;
+            &>div:nth-child(1){
+                order: 2;
+            }
+
+            &>div:nth-child(1){
+                order: 1;
+            }
+        }
+
+        &:nth-child(odd){
+            grid-template-columns: 5.5fr 5.3fr;
+
+
+        }
+    }
+
+
+
+    &-img{
+        img{
+
+            width: 100%;
+        }
+    }
+}
+
+
+.large-text-block{
+    margin-top: 4rem;
+    .about-h-desc{
+        max-width: 80rem;
+        margin: 2rem auto;
+    }
+}
+
+
+.full-w-img{
+    height: 60vh;
+    background-image: url("../images/full-w-img.jpg");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center;
 }

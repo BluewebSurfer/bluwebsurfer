@@ -1,0 +1,59 @@
+.contact-hero{
+    background-image: url("../images/contactus.jpg");
+}
+
+
+///////////////////
+// LOCATION SECTION
+
+.section-location {
+    padding: 5rem 2.5rem;
+
+    &__wrapper {
+        max-width: 111rem;
+        margin: 0 auto;
+
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+
+        @include respond(tab-port) {
+            gap: 3rem;
+            grid-template-columns: 1.5fr 2fr;
+        }
+
+    }
+
+    &__details {
+        display: grid;
+        gap: 2rem;
+        align-items: start;
+        grid-template-columns: 1fr 2fr;
+
+        @include respond(tab-port) {
+            height: 80%;
+
+        }
+    }
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+
+}
+
+.mapouter,
+.gmap_canvas,
+.gmap_iframe {
+    height: 80vh
+}
